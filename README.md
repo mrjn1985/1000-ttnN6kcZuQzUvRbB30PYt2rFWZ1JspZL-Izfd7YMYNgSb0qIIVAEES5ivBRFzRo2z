@@ -59,3 +59,4 @@ Brent Vatne did awesome work to make this run on exponent, checkout his [repo](h
 
 ### How to rename react native app?
 [react-native-rename](https://github.com/JuneDomingo/react-native-rename) - Rename react-native app with just one command
+# react-native
