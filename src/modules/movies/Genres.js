@@ -8,7 +8,7 @@ import {
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import * as genresActions from './genres.actions';
+import * as genresActions from './actions/genres.actions';
 import ListViewItem from './components/ListViewItem';
 import ProgressBar from '../_global/ProgressBar';
 import styles from './styles/Genres';
@@ -81,7 +81,6 @@ class Genres extends Component {
 	}
 
 	render() {
-		console.log(this.state.dataSource);
 		return (
 			this.state.isLoading ? <View style={styles.progressBar}><ProgressBar /></View> :
 			<ListView

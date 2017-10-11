@@ -12,7 +12,7 @@ import Swiper from 'react-native-swiper';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import * as moviesActions from './movies.actions';
+import * as moviesActions from './actions/movies.actions';
 import CardOne from './components/CardOne';
 import CardTwo from './components/CardTwo';
 import ProgressBar from '../_global/ProgressBar';
@@ -151,12 +151,12 @@ class Movies extends Component {
 				</Swiper>
 				<View>
 					<View style={styles.listHeading}>
-						<Text style={styles.listHeadingLeft}>Popular</Text>
+						<Text style={styles.listHeadingLeft}>Phổ biến</Text>
 						<TouchableOpacity>
 							<Text
 								style={styles.listHeadingRight}
-								onPress={this._viewMoviesList.bind(this, 'popular', 'Popular')}>
-								See all
+								onPress={this._viewMoviesList.bind(this, 'popular', 'Phổ biến')}>
+								Tất cả
 							</Text>
 						</TouchableOpacity>
 					</View>
@@ -171,16 +171,16 @@ class Movies extends Component {
 								{iconPlay}
 								<Text
 									style={styles.browseListItemText}
-									onPress={this._viewMoviesList.bind(this, 'now_playing', 'Now Playing')}>
-									Now Playing
+									onPress={this._viewMoviesList.bind(this, 'now_playing', 'Đang chiếu')}>
+									Đang chiếu
 								</Text>
 							</View>
 						</TouchableOpacity>
 						<TouchableOpacity activeOpacity={0.7}>
 							<View style={styles.browseListItem}>
 								{iconTop}
-								<Text style={styles.browseListItemText} onPress={this._viewMoviesList.bind(this, 'top_rated', 'Top Rated')}>
-									Top Rated
+								<Text style={styles.browseListItemText} onPress={this._viewMoviesList.bind(this, 'top_rated', 'Top đánh giá')}>
+									Top đánh giá
 								</Text>
 							</View>
 						</TouchableOpacity>
@@ -189,8 +189,8 @@ class Movies extends Component {
 								{iconUp}
 								<Text
 									style={styles.browseListItemText}
-									onPress={this._viewMoviesList.bind(this, 'upcoming', 'Upcoming')}>
-									Upcoming
+									onPress={this._viewMoviesList.bind(this, 'upcoming', 'Sắp chiếu')}>
+									Sắp chiếu
 								</Text>
 							</View>
 						</TouchableOpacity>

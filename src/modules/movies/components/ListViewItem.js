@@ -39,8 +39,9 @@ ListViewItem.propTypes = {
 };
 
 function mapStateToProps(state, ownProps) {
+	console.log(state.movies.genres);
 	return {
-		moviesGenres: state.movies.genres
+		genres: state.movies.genres
 	};
 }
 

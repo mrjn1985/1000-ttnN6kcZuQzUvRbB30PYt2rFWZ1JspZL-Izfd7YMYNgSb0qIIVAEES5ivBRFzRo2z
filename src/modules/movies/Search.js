@@ -9,7 +9,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import { TMDB_URL, TMDB_API_KEY } from '../../constants/api';
-import * as moviesActions from './movies.actions';
+import * as moviesActions from './actions/movies.actions';
 import CardThree from './components/CardThree';
 import styles from './styles/Search';
 import { iconsMap } from '../../utils/AppIcons';

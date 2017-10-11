@@ -16,7 +16,7 @@ import axios from 'axios';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import * as moviesActions from './movies.actions';
+import * as moviesActions from './actions/movies.actions';
 import Casts from './tabs/Casts';
 import DefaultTabBar from '../_global/scrollableTabView/DefaultTabBar';
 import Info from './tabs/Info';

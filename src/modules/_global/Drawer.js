@@ -87,12 +87,12 @@ class Drawer extends Component {
 								</Text>
 							</View>
 						</TouchableOpacity>
-						<View style={styles.drawerListItem}>
+						{/* <View style={styles.drawerListItem}>
 							{iconTV}
 							<Text style={styles.drawerListItemText} onPress={() => ToastAndroid.show('Đang thực hiện!', ToastAndroid.SHORT)}>
 								Truyền Hình
 							</Text>
-						</View>
+						</View> */}
 					</View>
 					<Text style={styles._version}>
 						{/* 'v1.0.0' */}

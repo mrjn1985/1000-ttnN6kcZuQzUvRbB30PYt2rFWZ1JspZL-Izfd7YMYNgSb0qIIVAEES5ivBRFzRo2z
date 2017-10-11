@@ -38,7 +38,7 @@ const CardOne = ({ info, viewMovie }) => (
 				</Text>
 				<TouchableOpacity activeOpacity={0.9} onPress={viewMovie.bind(this, info.id)}>
 					<View style={styles.viewButton}>
-						<Text style={styles.viewButtonText}>View Details</Text>
+						<Text style={styles.viewButtonText}>Chi tiết</Text>
 					</View>
 				</TouchableOpacity>
 			</View>
