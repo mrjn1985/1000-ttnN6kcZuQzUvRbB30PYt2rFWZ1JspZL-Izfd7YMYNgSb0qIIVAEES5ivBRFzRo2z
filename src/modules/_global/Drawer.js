@@ -16,13 +16,14 @@ class Drawer extends Component {
 
 		this._goToMovies = this._goToMovies.bind(this);
 		this._openSearch = this._openSearch.bind(this);
+		this._goToGenres =  this._goToGenres.bind(this);
 	}
 
 	_openSearch() {
 		this._toggleDrawer();
 		this.props.navigator.showModal({
 			screen: 'movieapp.Search',
-			title: 'Search'
+			title: 'Tìm kiếm'
 		});
 	}
 
@@ -30,6 +31,13 @@ class Drawer extends Component {
 		this._toggleDrawer();
 		this.props.navigator.popToRoot({
 			screen: 'movieapp.Movies'
+		});
+	}
+
+	_goToGenres() {
+		this._toggleDrawer();
+		this.props.navigator.popToRoot({
+			screen: 'movieapp.Genres'
 		});
 	}
 
@@ -43,6 +51,7 @@ class Drawer extends Component {
 
 	render() {
 		const iconSearch = (<Icon name="md-search" size={26} color="#9F9F9F" style={[styles.drawerListIcon, { paddingLeft: 2 }]} />);
+		const iconGenres = (<Icon name="md-list" size={26} color="#9F9F9F" style={styles.drawerListIcon} />);
 		const iconMovies = (<Icon name="md-film" size={26} color="#9F9F9F" style={[styles.drawerListIcon, { paddingLeft: 3 }]} />);
 		const iconTV = (<Icon name="ios-desktop" size={26} color="#9F9F9F" style={styles.drawerListIcon} />);
 		return (
@@ -53,7 +62,15 @@ class Drawer extends Component {
 							<View style={styles.drawerListItem}>
 								{iconSearch}
 								<Text style={styles.drawerListItemText}>
-									Search
+									Tìm Kiếm
+								</Text>
+							</View>
+						</TouchableOpacity>
+						<TouchableOpacity onPress={this._goToGenres}>
+							<View style={styles.drawerListItem}>
+								{iconGenres}
+								<Text style={styles.drawerListItemText}>
+									Thể Loại
 								</Text>
 							</View>
 						</TouchableOpacity>
@@ -67,8 +84,8 @@ class Drawer extends Component {
 						</TouchableOpacity>
 						<View style={styles.drawerListItem}>
 							{iconTV}
-							<Text style={styles.drawerListItemText} onPress={() => ToastAndroid.show('Coming Soon!', ToastAndroid.SHORT)}>
-								TV Shows
+							<Text style={styles.drawerListItemText} onPress={() => ToastAndroid.show('Đang thực hiện!', ToastAndroid.SHORT)}>
+								Truyền Hình
 							</Text>
 						</View>
 					</View>
