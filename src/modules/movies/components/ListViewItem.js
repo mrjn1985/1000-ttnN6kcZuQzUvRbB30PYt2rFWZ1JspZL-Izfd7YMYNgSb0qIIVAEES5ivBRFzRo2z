@@ -23,9 +23,9 @@ class ListViewItem extends Component {
 			<View style={styles.cardContainer}>
 				<TouchableOpacity activeOpacity={0.9} onPress={viewMovieGenres.bind(this, info.id)}>
 					<View style={styles.card}>
-            <View style={styles.cardGenre}>
-              <Text style={styles.cardGenreItem}>{info.name}</Text>
-            </View>
+						<View style={styles.cardGenre}>
+							<Text style={styles.cardGenreItem}>{info.name}</Text>
+						</View>
 					</View>
 				</TouchableOpacity>
 			</View>
@@ -39,7 +39,6 @@ ListViewItem.propTypes = {
 };
 
 function mapStateToProps(state, ownProps) {
-	console.log(state.movies.genres);
 	return {
 		genres: state.movies.genres
 	};
