@@ -16,7 +16,7 @@ class Drawer extends Component {
 
 		this._goToMovies = this._goToMovies.bind(this);
 		this._openSearch = this._openSearch.bind(this);
-		this._goToGenres =  this._goToGenres.bind(this);
+		this._goToGenres = this._goToGenres.bind(this);
 	}
 
 	_openSearch() {
@@ -30,14 +30,19 @@ class Drawer extends Component {
 	_goToMovies() {
 		this._toggleDrawer();
 		this.props.navigator.popToRoot({
-			screen: 'movieapp.Movies'
+			screen: 'movieapp.Movies',
+			title: 'Movies'
 		});
 	}
 
 	_goToGenres() {
 		this._toggleDrawer();
-		this.props.navigator.popToRoot({
-			screen: 'movieapp.Genres'
+		/* this.props.navigator.popToRoot({
+			screen: 'movieapp.Genres',
+		});*/
+		this.props.navigator.push({
+			screen: 'movieapp.Genres',
+			title: 'Thể loại'
 		});
 	}
 

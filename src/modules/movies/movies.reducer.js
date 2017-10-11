@@ -16,12 +16,6 @@ export default function (state = initialState.movies, action) {
 				nowPlayingMovies: action.nowPlayingMovies
 			};
 
-		case types.RETRIEVE_MOVIES_GENRES_SUCCESS:
-			return {
-				...state,
-				genres: action.moviesGenres
-			};
-
 		case types.RETRIEVE_MOVIES_LIST_SUCCESS:
 			return {
 				...state,

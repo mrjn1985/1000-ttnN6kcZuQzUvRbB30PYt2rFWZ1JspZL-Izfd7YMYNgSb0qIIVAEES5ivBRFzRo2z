@@ -11,7 +11,7 @@ import { connect } from 'react-redux';
 import * as genresActions from './genres.actions';
 import ListViewItem from './components/ListViewItem';
 import ProgressBar from '../_global/ProgressBar';
-import styles from './styles/MoviesList';
+import styles from './styles/Genres';
 import { iconsMap } from '../../utils/AppIcons';
 
 class Genres extends Component {
@@ -36,7 +36,7 @@ class Genres extends Component {
 	}
 
 	_retrieveGenresList(isRefreshed) {
-		this.props.actions.retrieveMoviesGenres()
+		this.props.actions.retrieveGenres()
 			.then(() => {
 				const ds = new ListView.DataSource({ rowHasChanged: (row1, row2) => row1 !== row2 });
 				const dataSource = ds.cloneWithRows(this.props.genres.results);
@@ -69,7 +69,7 @@ class Genres extends Component {
 
 	_onRefresh() {
 		this.setState({ isRefreshing: true });
-		this._retrieveMoviesList('isRefreshed');
+		this._retrieveGenresList('isRefreshed');
 	}
 
 	_onNavigatorEvent(event) {
@@ -81,6 +81,7 @@ class Genres extends Component {
 	}
 
 	render() {
+		console.log(this.state.dataSource);
 		return (
 			this.state.isLoading ? <View style={styles.progressBar}><ProgressBar /></View> :
 			<ListView

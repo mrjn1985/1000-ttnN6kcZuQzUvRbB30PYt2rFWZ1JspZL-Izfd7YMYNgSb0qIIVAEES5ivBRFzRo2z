@@ -1,7 +1,7 @@
 export default {
 	movies: {
 		details: {},
-		genres: [],
+		genres: {},
 		list: {},
 		nowPlayingMovies: {},
 		popularMovies: {},
