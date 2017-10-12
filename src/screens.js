@@ -7,6 +7,7 @@ import MoviesList from './modules/movies/MoviesList';
 import Movie from './modules/movies/Movie';
 import Search from './modules/movies/Search';
 import Genres from './modules/movies/Genres';
+import MoviesByGenres from './modules/movies/MoviesByGenres';
 
 export function registerScreens(store, Provider) {
 	Navigation.registerComponent('movieapp.Movie', () => Movie, store, Provider);
@@ -15,4 +16,5 @@ export function registerScreens(store, Provider) {
 	Navigation.registerComponent('movieapp.Search', () => Search, store, Provider);
 	Navigation.registerComponent('movieapp.Drawer', () => Drawer);
 	Navigation.registerComponent('movieapp.Genres', () => Genres, store, Provider);
+	Navigation.registerComponent('movieapp.MoviesByGenres', () => MoviesByGenres, store, Provider);
 }

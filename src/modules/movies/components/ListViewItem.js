@@ -20,7 +20,7 @@ class ListViewItem extends Component {
 	render() {
 		const { info, viewMovieGenres } = this.props;
 		return (
-			<View style={styles.cardContainer}>
+			<View style={styles.container}>
 				<TouchableOpacity activeOpacity={0.9} onPress={viewMovieGenres.bind(this, info.id)}>
 					<View style={styles.card}>
 						<View style={styles.cardGenre}>

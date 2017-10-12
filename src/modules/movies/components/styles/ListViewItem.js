@@ -1,24 +1,30 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginHorizontal: 16,
-    backgroundColor: 'white'
-  },
-  card: {
-		backgroundColor: 'white',
+	container: {
+		flex: 1
+	},
+
+	card: {
 		borderRadius: 3,
-		minHeight: 148,
-		flexDirection: 'row',
-		paddingRight: 16,
-		overflow: 'hidden'
+		flexDirection: "row",
+		justifyContent: "center",
+		overflow: "hidden",
+		backgroundColor: "black",
+		padding: 10,
+		margin: 10
 	},
-  cardGenre: {
-		flexDirection: 'row'
+
+	cardGenre: {
+		flexDirection: "row"
 	},
+
 	cardGenreItem: {
-		fontSize: 11,
-		marginRight: 5
+		fontSize: 20,
+		marginRight: 5,
+		color: "white",
+		fontWeight: "bold"
 	}
 });
+
+export default styles;
