@@ -135,7 +135,7 @@ class Movies extends Component {
 						onRefresh={this._onRefresh}
 						colors={['#EA0000']}
 						tintColor="white"
-						title="loading..."
+						title="Đang tải..."
 						titleColor="white"
 						progressBackgroundColor="white"
 					/>

@@ -66,7 +66,7 @@ class MoviesByGenres extends Component {
 
 			axios
 				.get(
-					`${TMDB_URL}/genre/${genresId}/movies?api_key=${TMDB_API_KEY}&page=${page}&include_adult=true&sort_by=created_at.desc`
+					`${TMDB_URL}/genre/${genresId}/movies?api_key=${TMDB_API_KEY}&page=${page}&language=vi-VN&include_adult=true&sort_by=created_at.desc`
 				)
 				.then(res => {
 					const data = this.state.list.results;

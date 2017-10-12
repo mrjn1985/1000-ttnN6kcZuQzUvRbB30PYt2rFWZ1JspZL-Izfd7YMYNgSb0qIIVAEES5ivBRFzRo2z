@@ -18,22 +18,22 @@ const Info = ({ info }) => {
 		<View style={styles.container}>
 			<View style={styles.overview}>
 				<Text style={styles.label}>
-					Overview
+					Tổng quan
 				</Text>
 				<Text style={styles.overviewText}>
 					{info.overview}
 				</Text>
 			</View>
 			<View style={styles.labelRow}>
-				<Text style={styles.label}>Release Date</Text>
+				<Text style={styles.label}>Ngày phát hành</Text>
 				<Text style={styles.value}>{releaseDate}</Text>
 			</View>
 			<View style={styles.labelRow}>
-				<Text style={styles.label}>Directed By</Text>
+				<Text style={styles.label}>Đạo diễn</Text>
 				<Text style={styles.value}>{director[0].name}</Text>
 			</View>
 			<View style={styles.labelRow}>
-				<Text style={styles.label}>Budget</Text>
+				<Text style={styles.label}>Doanh thu</Text>
 				<Text style={styles.value}>{budget}</Text>
 			</View>
 		</View>

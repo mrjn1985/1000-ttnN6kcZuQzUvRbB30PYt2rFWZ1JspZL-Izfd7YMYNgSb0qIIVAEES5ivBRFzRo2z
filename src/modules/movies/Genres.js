@@ -47,12 +47,12 @@ class Genres extends Component {
 
 	_viewMovieByGenre(genresId) {
 		let rightButtons = [];
-		if (Platform.OS === 'ios') {
+		if (Platform.OS === "ios") {
 			rightButtons = [
 				{
-					id: 'close',
-					title: 'Close',
-					icon: iconsMap['ios-close']
+					id: "close",
+					title: "Close",
+					icon: iconsMap["ios-close"]
 				}
 			];
 		}

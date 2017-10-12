@@ -66,7 +66,7 @@ class Search extends Component {
 				page = this.state.currentPage + 1;
 			}
 
-			axios.get(`${TMDB_URL}/search/movie/?api_key=${TMDB_API_KEY}&query=${this.state.query}&page=${page}`)
+			axios.get(`${TMDB_URL}/search/movie/?api_key=${TMDB_API_KEY}&query=${this.state.query}&page=${page}&language=vi-VN`)
 				.then(res => {
 					const data = this.state.searchResults.results;
 					const newData = res.data.results;

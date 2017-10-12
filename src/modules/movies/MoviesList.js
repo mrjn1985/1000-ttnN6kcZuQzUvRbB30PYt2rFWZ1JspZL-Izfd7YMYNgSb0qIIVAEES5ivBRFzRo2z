@@ -66,7 +66,7 @@ class MoviesList extends Component {
 				page = this.state.currentPage + 1;
 			}
 
-			axios.get(`${TMDB_URL}/movie/${type}?api_key=${TMDB_API_KEY}&page=${page}`)
+			axios.get(`${TMDB_URL}/movie/${type}?api_key=${TMDB_API_KEY}&page=${page}&language=vi-VN`)
 				.then(res => {
 					const data = this.state.list.results;
 					const newData = res.data.results;
@@ -131,7 +131,7 @@ class MoviesList extends Component {
 						onRefresh={this._onRefresh}
 						colors={['#EA0000']}
 						tintColor="white"
-						title="loading..."
+						title="Đang tải..."
 						titleColor="white"
 						progressBackgroundColor="white"
 					/>

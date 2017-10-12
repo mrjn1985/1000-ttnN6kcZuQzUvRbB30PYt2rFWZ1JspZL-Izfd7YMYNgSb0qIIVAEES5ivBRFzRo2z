@@ -13,7 +13,7 @@ export default function (state = initialState.movies, action) {
 		case types.RETRIEVE_MOVIES_GENRES_SUCCESS:
 			return {
 				...state,
-				genres: action.moviesGenres
+				list: action.list
 			};
 
 		case types.RETRIEVE_POPULAR_MOVIES_SUCCESS:

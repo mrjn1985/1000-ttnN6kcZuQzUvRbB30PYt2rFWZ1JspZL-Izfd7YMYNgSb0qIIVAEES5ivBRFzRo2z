@@ -12,12 +12,12 @@ export function retrieveGenresSuccess(res) {
 
 export function retrieveGenres() {
 	return function (dispatch) {
-		return axios.get(`${TMDB_URL}/genre/movie/list?api_key=${TMDB_API_KEY}`)
+		return axios.get(`${TMDB_URL}/genre/movie/list?api_key=${TMDB_API_KEY}&language=vi-VN`)
 		.then(res => {
 			dispatch(retrieveGenresSuccess(res));
 		})
 		.catch(error => {
-			console.log('GENRES', error); //eslint-disable-line
+			console.log('retrieveGenres', error); //eslint-disable-line
 		});
 	};
 }
@@ -31,12 +31,12 @@ export function retrieveMoviesGenresSuccess(res) {
 
 export function retrieveMoviesGenres(genresId, page) {
 	return function (dispatch) {
-		return axios.get(`${TMDB_URL}/genre/${genresId}/movies?api_key=${TMDB_API_KEY}&page=${page}&include_adult=true&sort_by=created_at.desc`)
+		return axios.get(`${TMDB_URL}/genre/${genresId}/movies?api_key=${TMDB_API_KEY}&page=${page}&language=vi-VN&include_adult=true&sort_by=created_at.desc`)
 		.then(res => {
 			dispatch(retrieveMoviesGenresSuccess(res));
 		})
 		.catch(error => {
-			console.log('MOVIES_GENRES', error); //eslint-disable-line
+			console.log('retrieveMoviesGenres', error); //eslint-disable-line
 		});
 	};
 }
@@ -51,12 +51,12 @@ export function retrievePopularMoviesSuccess(res) {
 
 export function retrievePopularMovies(page) {
 	return function (dispatch) {
-		return axios.get(`${TMDB_URL}/movie/popular?api_key=${TMDB_API_KEY}&page=${page}`)
+		return axios.get(`${TMDB_URL}/movie/popular?api_key=${TMDB_API_KEY}&page=${page}&language=vi-VN`)
 		.then(res => {
 			dispatch(retrievePopularMoviesSuccess(res));
 		})
 		.catch(error => {
-			console.log('Popular', error); //eslint-disable-line
+			console.log('retrievePopularMovies', error); //eslint-disable-line
 		});
 	};
 }
@@ -71,12 +71,12 @@ export function retrieveNowPlayingMoviesSuccess(res) {
 
 export function retrieveNowPlayingMovies(page) {
 	return function (dispatch) {
-		return axios.get(`${TMDB_URL}/movie/now_playing?api_key=${TMDB_API_KEY}&page=${page}`)
+		return axios.get(`${TMDB_URL}/movie/now_playing?api_key=${TMDB_API_KEY}&page=${page}&language=vi-VN`)
 		.then(res => {
 			dispatch(retrieveNowPlayingMoviesSuccess(res));
 		})
 		.catch(error => {
-			console.log('Now Playing', error); //eslint-disable-line
+			console.log('retrieveNowPlayingMovies', error); //eslint-disable-line
 		});
 	};
 }
@@ -91,12 +91,12 @@ export function retrieveMoviesListSuccess(res) {
 
 export function retrieveMoviesList(type, page) {
 	return function (dispatch) {
-		return axios.get(`${TMDB_URL}/movie/${type}?api_key=${TMDB_API_KEY}&page=${page}`)
+		return axios.get(`${TMDB_URL}/movie/${type}?api_key=${TMDB_API_KEY}&page=${page}&language=vi-VN`)
 		.then(res => {
 			dispatch(retrieveMoviesListSuccess(res));
 		})
 		.catch(error => {
-			console.log('Movies List', error); //eslint-disable-line
+			console.log('retrieveMoviesList', error); //eslint-disable-line
 		});
 	};
 }
@@ -111,12 +111,12 @@ export function retrieveMoviesSearchResultsSuccess(res) {
 
 export function retrieveMoviesSearchResults(query, page) {
 	return function (dispatch) {
-		return axios.get(`${TMDB_URL}/search/movie?api_key=${TMDB_API_KEY}&query=${query}&page=${page}`)
+		return axios.get(`${TMDB_URL}/search/movie?api_key=${TMDB_API_KEY}&query=${query}&page=${page}&language=vi-VN`)
 		.then(res => {
 			dispatch(retrieveMoviesSearchResultsSuccess(res));
 		})
 		.catch(error => {
-			console.log('Movies Search Results', error); //eslint-disable-line
+			console.log('retrieveMoviesSearchResults', error); //eslint-disable-line
 		});
 	};
 }
@@ -136,7 +136,7 @@ export function retrieveMovieDetails(movieId) {
 			dispatch(retrieveMovieDetailsSuccess(res));
 		})
 		.catch(error => {
-			console.log('Movie Details', error); //eslint-disable-line
+			console.log('retrieveMovieDetails', error); //eslint-disable-line
 		});
 	};
 }
