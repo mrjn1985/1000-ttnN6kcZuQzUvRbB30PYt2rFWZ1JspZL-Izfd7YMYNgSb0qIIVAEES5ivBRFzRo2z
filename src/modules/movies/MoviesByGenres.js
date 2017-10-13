@@ -106,7 +106,7 @@ class MoviesByGenres extends Component {
 
 	_onRefresh() {
 		this.setState({ isRefreshing: true });
-		this._retrieveMoviesList("isRefreshed");
+		this.retrieveMoviesGenres("isRefreshed");
 	}
 
 	_onNavigatorEvent(event) {

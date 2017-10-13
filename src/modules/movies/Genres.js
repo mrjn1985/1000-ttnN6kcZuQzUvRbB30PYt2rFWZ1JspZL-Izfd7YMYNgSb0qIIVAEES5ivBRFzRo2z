@@ -55,6 +55,13 @@ class Genres extends Component {
 					icon: iconsMap["ios-close"]
 				}
 			];
+		} else {
+			rightButtons = [
+				{
+					id: "close",
+					icon: iconsMap["ios-arrow-round-down"]
+				}
+			];
 		}
 		this.props.navigator.showModal({
 			screen: "movieapp.MoviesByGenres",
@@ -112,6 +119,9 @@ class Genres extends Component {
 				enableEmptySections
 				dataSource={this.state.dataSource}
 				renderRow={rowData => this._renderRow(rowData)}
+				renderSeparator={(sectionId, rowId) => (
+					<View key={rowId} style={styles.seperator} />
+				)}
 				renderFooter={() => this._renderFooter()}
 				refreshControl={
 					<RefreshControl
