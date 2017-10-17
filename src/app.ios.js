@@ -37,12 +37,12 @@ class App extends Component {
 					screen: 'movieapp.Movies',
 					icon: iconsMap['ios-film-outline'],
 					selectedIcon: iconsMap['ios-film'],
-					title: 'Movies',
+					title: 'Tìm kiếm',
 					navigatorStyle,
 					navigatorButtons: {
 						rightButtons: [
 							{
-								title: 'Search',
+								title: 'Tìm kiếm',
 								id: 'search',
 								icon: iconsMap['ios-search']
 							}
@@ -50,7 +50,7 @@ class App extends Component {
 					}
 				},
 				{
-					label: 'TV Shows',
+					label: 'Truyền hình',
 					screen: 'movieapp.Movies',
 					icon: iconsMap['ios-desktop-outline'],
 					selectedIcon: iconsMap['ios-desktop'],
